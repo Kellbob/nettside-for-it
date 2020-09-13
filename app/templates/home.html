@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div>
+    <div>
+      <h1 class="title_stuff">Search for images</h1>
+      <div class="position-on-forum">
+        <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <p>
+            {{ form.search_feld(class_="submit_feld",size=32, autocomplete="off") }}
+            {% for error in form.search_feld.errors %}
+              <br><span style="color: red;">{{error}}</span>
+            {% endfor %}
+            {{ form.submit(class_="submit_button") }}
+          </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

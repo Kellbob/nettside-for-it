@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+     <link href="{{ url_for('static', filename='css/main.css') }}" type="text/css" rel="stylesheet"/> 
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <div class="header-class">
+          {% if current_user.is_anonymous %}
+            <p class="header-class" id="username" style="margin-right: 82em;"></p>
+            <a href="{{url_for('login')}}" class="header-class">login</a>
+          {% else %}
+            <a class="header-class" id="username" style="margin-right: 80em;" href="{{url_for('post')}}">{{current_user.username}}</a>
+            <a href="{{url_for('logout')}}" class="header-class">Logout</a>
+          {% endif %}
+          {% if title != "Home" %}
+            <a href="{{url_for('home')}}" class="header-class">Home</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="content">
+          {% block content %}{% endblock%}
+      </div>
+    </div>
+    <footer>
+      <p style="margin:0%; margin-right: 15px; display:inline-block;">Sebastian. E. Johansen</p>
+      <a style="margin:0%; margin-right: 15px; display:inline-block;" href="mailto:example@email.com">Email</a>
+      <a style="margin:0%; display:inline-block;" href="">github</a>
+    </footer>
+    <script type="text/javascript">
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    var username = document.getElementById("username");
+    var username_1 = capitalizeFirstLetter(username.innerText);
+    username.innerHTML = username_1;
+    </script>
+  </body>
+</html>

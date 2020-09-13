@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="form_class">
+    <h1>Sign In</h1>
+    <a href="{{ url_for('register') }}">Click to Register!</a>
+  <div>
+    <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      <p class="">
+        {{ form.username.label }}<br>
+        {{ form.username(size=32,class_="submit_feld", autocomplete="off") }}
+        {% for error in form.username.errors %}
+          <br><span style="color: red;">{{error}}</span>
+        {% endfor %}
+      </p>
+      <p class="">
+        {{ form.password.label }}<br>
+        {{ form.password(size=32,class_="submit_feld", autocomplete="off") }}
+        {% for error in form.password.errors %}
+          <br><span style="color: red;">{{error}}</span>
+        {% endfor %}
+      </p>
+      <p>{{ form.submit(class_="submit_button") }}</p>
+    </form>
+  </div>
+</div>
+{% endblock %}

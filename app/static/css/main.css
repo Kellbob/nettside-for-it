@@ -1,0 +1,138 @@
+body{
+  background-color: #ffffd2;
+}
+.content{
+  color: white;
+  margin-left: 2.5%;
+  margin-top: 5%;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+.header{
+  color: #aa96da;
+  box-sizing: content-box;
+  padding-top: .75%;
+  padding-left: 1.5%;
+  padding-bottom: .75%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fcbad3;
+  background-size: cover;
+}
+.header-class{
+  margin:0%;
+  display:inline-block;
+  position: sticky;
+  left: 90%
+  box-sizing: content-box;
+  word-spacing: 2px;
+  font-size: 100%;
+}
+.submit_button{
+  background-color: rgba(252,186,211,0.7);
+  min-width: 60px;
+  min-height: 28px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-size: 75%;
+  color: #aa96da;
+  margin-left: 5px;
+  font-size: 90%;
+}
+.submit_button:hover{
+  cursor: pointer;
+}
+.submit_button[id=post]{
+  margin-left: 0%;
+}
+.submit_feld{
+  border-radius: 7px;
+  background-color:  rgba(168,216,234,0.5);/*#a8d8ea;*/
+  outline: none;
+  border: 0px;
+  min-width: 85px;
+  min-height: 25px;
+  padding-left: 5px;
+  color: #fcbad3;
+}
+.position-on-forum{
+  position: fixed;
+  top: 35%;
+  left: 40%;
+}
+.title_stuff{
+  color: #fcbad3;
+  text-align: center;
+  position: relative;
+  top: 15%;
+}
+.form_class{
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  color: #fcbad3;
+}
+footer {
+  color: #fcbad3;
+  position: absolute;
+  left:42.5%;
+  top:95%;
+  margin: 0%;
+  display: inline-block;
+}
+.bilde-class{
+  width: 300px;
+  height: 175px;
+  position: fixed;
+  left: 40%;
+  top: 35%;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.btn {
+  border: 0px;
+  background-color: #fcbad3;
+  color: #aa96da;
+  padding: 5px 12.5px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: bold;
+}
+.btn:hover{
+  cursor: pointer !important;
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.post-form[id=post]{
+  position: fixed;
+  left: 2.5;
+}
+.bilde-class-to{
+  width: 300px;
+  height: 175px;
+  margin-bottom: 1em;
+}
+.bilder{
+  position: fixed;
+  left: 75%;
+  top: 5%;
+}
+.bilde-p{
+  color: #fcbad3;
+  margin-bottom: 0;
+}

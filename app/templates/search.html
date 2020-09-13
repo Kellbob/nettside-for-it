@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div>
+    <div>
+      <h1 class="title_stuff">{{search_word}}</h1>
+    </div>
+    {% if bilde %}
+      <img src="{{bilde}}" class="bilde-class">
+    {% endif %}
+  <div>
+{% endblock %}

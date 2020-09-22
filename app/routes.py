@@ -68,6 +68,7 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+@login_required
 @app.route('/post', methods=['GET', 'POST'])
 def post():
     form = PostForm()
